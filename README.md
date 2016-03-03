@@ -1,1 +1,1 @@
-"# cordova-plugin-networkinfo" 
+# cordova-plugin-networkinfo

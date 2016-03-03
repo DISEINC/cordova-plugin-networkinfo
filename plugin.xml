@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-plugin-networkinfo"
+    version="1.0.0">
+
+    <name>NetworkInfo</name>
+    <description>
+    	This plugin allows your application to retrieve information about network interfaces
+	</description>
+
+    <license>MIT</license>
+
+    <keywords>local,ip,network</keywords>
+
+	<engines>
+		<engine name="cordova" version="&gt;=3.1.0" />
+	</engines>
+
+    <js-module src="www/networkinfo.js" name="networkinfo">
+    	<clobbers target="window.networkinfo" />
+    </js-module>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="networkinfo">
+                <param name="android-package" value="se.ramnet.cordova-plugin.networkinfo"/>
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        </config-file>
+
+        <source-file src="src/android/networkinterface.java" target-dir="src/se/ramnet/cordova-plugin/networkinfo" />
+    </platform>
+
+</plugin>
