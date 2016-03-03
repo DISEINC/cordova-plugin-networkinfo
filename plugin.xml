@@ -34,7 +34,7 @@
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
         </config-file>
 
-        <source-file src="src/android/networkinterface.java" target-dir="src/se/ramnet/cordova-plugin/networkinfo" />
+        <source-file src="src/android/networkinfo.java" target-dir="src/se/ramnet/cordova-plugin/networkinfo" />
     </platform>
 
 </plugin>
