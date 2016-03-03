@@ -21,9 +21,9 @@ public class networkinfo extends CordovaPlugin {
 	private static String TAG = "cordova-plugin-networkinfo";
 
 	private JSONObject getInetAddressInfo(InetAddress address) throws JSONException {
-		JSONObject obj = new JSONObject();
 		if (address == null)
 			return null;
+		JSONObject obj = new JSONObject();
 		obj.put("canonicalHostName", address.getCanonicalHostName());
 		obj.put("hostName", address.getHostName());
 		obj.put("hostAddress", address.getHostAddress());
