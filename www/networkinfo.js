@@ -1,8 +1,8 @@
-var networinfo = function() {
+var networkinfo = function() {
 };
 
-networinfo.getNetworkInfo = function(success, fail) {
-	cordova.exec(success, fail, "networinfo", "getNetworkInfo", []);
+networkinfo.getNetworkInfo = function(success, fail) {
+	cordova.exec(success, fail, "networkinfo", "getNetworkInfo", []);
 };
 
-module.exports = networinfo;
+module.exports = networkinfo;
