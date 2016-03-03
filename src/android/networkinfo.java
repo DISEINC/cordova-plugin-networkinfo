@@ -15,7 +15,7 @@ public class networkinfo extends CordovaPlugin {
 	@Override
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
 		try {
-			if (action.equals('getNetworkInfo')) {
+			if (action.equals("getNetworkInfo")) {
 				callbackContext.success("TEST");
 				return true;
 			}
